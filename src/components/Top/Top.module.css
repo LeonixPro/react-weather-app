@@ -1,0 +1,90 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url(../../assets/main.css);
+.wrapper {
+    height: 80px;display: flex;align-items: center;justify-content: space-between;
+}
+.logo {
+    font-weight: bold;
+}
+.search {position: relative;}
+.search input {
+    padding: 8px 0;border: 1px solid var(--gray);outline: none;
+    font-size: .9rem;border-radius: 20px;text-align: center;
+    width: 260px;background: transparent;
+}
+.search input.dark:focus {
+    color: var(--white);
+}
+.search::after {
+    content: '\F52A';font-family: 'bootstrap-icons';position: absolute;
+    top: 6px;right: 15px;
+}
+button.theme {
+    border: none;background: transparent;font-weight: bold;
+    transition: var(--transition);padding: 10px 15px;
+    color: var(--main);
+}
+button.light {
+    border: none;font-weight: bold;background: transparent;
+    transition: var(--transition);padding: 10px 15px;
+    color: var(--white);color: var(--white)
+}
+button.theme::before {
+    content: '\F5A2';font-family: 'bootstrap-icons';margin-right: 10px;
+    position: relative;background: var(--dark-theme);color: var(--white);
+    padding: 6px;border-radius: 5px;font-size: .8rem;
+}
+button.light::before {
+    content: '\F5A1';font-family: 'bootstrap-icons';margin-right: 10px;
+    position: relative;background: var(--dark-theme);color: var(--white);
+    padding: 6px;border-radius: 5px;font-size: .8rem;
+}
+button.theme:hover {
+    background: var(--dark-theme);border-radius: 20px;color: var(--white);
+}
+button.light:hover {
+    background: var(--white);border-radius: 20px;color: var(--main);
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    .wrapper {
+        padding: 0 20px;height: 60px;
+    }
+    .logo {
+        font-size: .9rem;
+    }
+    button.theme, button.light {
+        font-size: .9rem;padding: 7px 12px;
+    }
+    button.theme::before, button.light::before {
+        font-size: .7rem;
+    }
+    .search {
+        position: absolute;width: 280px;left: 50%;margin-left: -140px;top: 100px;z-index: 10;
+    }
+    .search::after {
+        content: '\F52A';font-family: 'bootstrap-icons';position: absolute;
+        top: 6px;right: 15px;color: var(--white);
+    }
+    .search input {
+        width: 100%;
+    }
+    .search input:focus {
+        color: var(--white);
+    }
+}
+@media screen and (max-width: 780px) and (min-width: 481px) {
+    .search {
+        position: absolute;width: 280px;left: 50%;margin-left: -140px;top: 100px;z-index: 10;
+    }
+    .search::after {
+        content: '\F52A';font-family: 'bootstrap-icons';position: absolute;
+        top: 6px;right: 15px;color: var(--white);
+    }
+    .search input {
+        width: 100%;
+    }
+    .search input:focus {
+        color: var(--white);
+    }
+}
